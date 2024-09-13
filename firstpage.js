@@ -116,52 +116,63 @@ var personalitytypes = [
   {
     type: "Romantic",
     answers: ["Beach vacation", "Quality time", "Gifts", "Words of affirmation", "Trust and loyalty"],
-    description: "Romantics value emotional connection and intimacy in their relationships. They prioritize creating memorable experiences and showing affection through grand gestures."
+    description: "Romantics value emotional connection and intimacy in their relationships. They prioritize creating memorable experiences and showing affection through grand gestures.",
+    count:0
   },
   {
     type: "Adventurous",
     answers: ["Skydiving", "City break", "Empathy", "Independence and freedom", "Through actions and gestures"],
-    description: "Adventurous individuals crave excitement and novelty in their relationships. They prioritize freedom and independence, and value partners who can keep up with their spontaneous nature."
+    description: "Adventurous individuals crave excitement and novelty in their relationships. They prioritize freedom and independence, and value partners who can keep up with their spontaneous nature.",
+    count:0
   },
   {
     type: "Urban",
     answers: ["Museum visit", "Undivided attention", "Through gifts and surprises", "Compliments", "Faithfulness"],
-    description: "Urban personalities appreciate the finer things in life and value sophistication in their relationships. They prioritize intellectual connections and enjoy exploring new cultural experiences with their partners."
+    description: "Urban personalities appreciate the finer things in life and value sophistication in their relationships. They prioritize intellectual connections and enjoy exploring new cultural experiences with their partners.",
+    count:0
   },
   {
     type: "Verbal",
     answers: ["Words of affirmation", "Meaningful conversations", "Encouraging words", "Active listening", "Reliability"],
-    description: "Verbal individuals thrive on communication and value open, honest dialogue in their relationships. They prioritize emotional support and encouragement from their partners."
+    description: "Verbal individuals thrive on communication and value open, honest dialogue in their relationships. They prioritize emotional support and encouragement from their partners.",
+    count:0
   },
   {
     type: "Quality Time",
     answers: ["Quality time", "Undivided attention", "Shared activities", "Comfort and reassurance", "Dependability"],
-    description: "Those who value Quality Time prioritize spending meaningful time with their partners and engaging in shared activities. They crave emotional connection and reassurance in their relationships."
+    description: "Those who value Quality Time prioritize spending meaningful time with their partners and engaging in shared activities. They crave emotional connection and reassurance in their relationships.",
+    count:0
   },
   {
     type: "Material",
     answers: ["Gifts", "Luxury items", "Practical items", "Through actions and gestures", "Unconditional support"],
-    description: "Material personalities appreciate tangible expressions of love and value the comfort and security that comes with material possessions. They prioritize partners who can provide for their needs."
+    description: "Material personalities appreciate tangible expressions of love and value the comfort and security that comes with material possessions. They prioritize partners who can provide for their needs.",
+    count:0
   },
   {
     type: "Commitment",
     answers: ["Trust and loyalty", "Faithfulness", "Reliability", "Dependability", "Autonomy"],
-    description: "Individuals who value Commitment prioritize long-term relationships and value loyalty and trust in their partners. They seek stability and security in their relationships."
+    description: "Individuals who value Commitment prioritize long-term relationships and value loyalty and trust in their partners. They seek stability and security in their relationships.",
+    count:0
+
   },
   {
     type: "Independence",
     answers: ["Independence and freedom", "Autonomy", "Self-sufficiency", "Unconditional support", "Emotional support and validation"],
-    description: "Independent personalities value their autonomy and prioritize maintaining their individuality in relationships. They seek partners who respect their need for space and independence."
+    description: "Independent personalities value their autonomy and prioritize maintaining their individuality in relationships. They seek partners who respect their need for space and independence.",
+    count:0
   },
   {
     type: "Emotional",
     answers: ["Emotional support and validation", "Empathy", "Active listening", "Comfort and reassurance", "Self-awareness"],
-    description: "Emotional individuals prioritize emotional connection and validation in their relationships. They value partners who can provide emotional support and empathy."
+    description: "Emotional individuals prioritize emotional connection and validation in their relationships. They value partners who can provide emotional support and empathy.",
+    count:0
   },
   {
     type: "Practical",
     answers: ["Through actions and gestures", "Helping with chores", "Running errands", "Cooking meals", "Practical support"],
-    description: "Practical personalities value actions over words and prioritize partners who can provide tangible support and assistance. They seek reliability and dependability in their relationships."
+    description: "Practical personalities value actions over words and prioritize partners who can provide tangible support and assistance. They seek reliability and dependability in their relationships.",
+    count:0
   }
 ]
 
@@ -188,7 +199,7 @@ var personalitytypes = [
   
   ///// First function to hide and show the two pages, the intro and the check feelings
   $('.start-button').on('click', function() {
-    // useranswers = []
+    useranswers = []
     $('.intro-container').hide()
     $('.check-feelings-page').show()
 
@@ -217,6 +228,7 @@ var personalitytypes = [
 
   // .attr() gets or sets an HTML element's attribute value
   
+  /// this functionn is to make the qution and the answer
   var questionindex= 0
   var useranswers = []
   
@@ -256,17 +268,36 @@ var personalitytypes = [
   
   
     for (var i = 0; i < personalitytypes.length; i++) {
-      var count = 0;
+     
       for (var j = 0; j < useranswers.length; j++) {
         if (personalitytypes[i].answers.includes(useranswers[j])) {
-          count++;
+          personalitytypes[i].count++
         }
       }
-      if (count >= useranswers.length / 2) {
-        personalitytype = personalitytypes[i].type;
-        personalitydescription = personalitytypes[i].description
-      }
+      // if (personalitytypes[i].count >= useranswers.length / 2) {
+      //   personalitytype = personalitytypes[i].type;
+      //   personalitydescription = personalitytypes[i].description
+      // }
+
     }
+
+    var max = personalitytypes[0]
+    for (let index = 0; index < personalitytypes.length; index++) {
+      const element = personalitytypes[index];
+      if(max.count<element.count){
+        max=element
+      }
+      
+    }
+
+    console.log(personalitytypes);
+    console.log(max);
+    // console.log(personalitydescription);
+            personalitytype = max.type;
+        personalitydescription = max.description
+    
+
+    
   
     if (personalitytype) {
       message = '<h1>Congratulations! Your personality type is ' + personalitytype + '!</h1>'
