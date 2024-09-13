@@ -41,6 +41,6 @@ function each(coll, f) {
     $("#name2").val("")
     $("#pass2").val("")
 });
+})
+})
 
-})
-})
