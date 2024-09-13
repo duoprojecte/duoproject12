@@ -1,10 +1,7 @@
 $(document).ready(function() {
     $("#Form2").on('submit', function(event) {
-        event.preventDefault()
-        window.location.href = "../flight1/flight.html";
-    });
-        event.preventDefault()
-
+  
+event.preventDefault()
 var username=$("#name2").val()
 var password =$("#pass2").val()
 console.log(username)
@@ -34,15 +31,21 @@ function each(coll, f) {
         
     } else if (element.username === username && element.pass=== password) {
         setTimeout(function () {   $("#msgErreur").text("")
-            alert("Login successful!") } , 1000)  
+            alert("Login successful!")     
+             window.location.href = "../personality.html"
+          } , 1000) 
+       
+ 
         $("#name2").css({"border-color":"green"})
         $("#pass2").css({"border-color":"green"})
+      
   
        
     }
    
     $("#name2").val("")
     $("#pass2").val("")
+});
 });
 })
 

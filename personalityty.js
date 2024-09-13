@@ -148,7 +148,7 @@ $(".emoji-container img").click(function () {
   $(".message-container").text(message);
   //// .text :  sets the text  to the value of message
   setTimeout(function () {
-    affiche(questions);
+    affiche(questions)
     $(".check-feelings-page").hide()
     $("#question-personality").show()
   }, 2000)
