@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('#Form').on('submit', function(event) {
-        window.location.href = "C:\Users\lenovo\Desktop\duoproject12\firstpage.html";
         event.preventDefault()// Prevent the form from submitting
    
 //nhothom fi valeur
