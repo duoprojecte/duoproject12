@@ -148,7 +148,7 @@ $(".emoji-container img").click(function () {
   $(".message-container").text(message);
   //// .text :  sets the text  to the value of message
   setTimeout(function () {
-    affiche(questions);
+    affiche(questions)
     $(".check-feelings-page").hide()
     $("#question-personality").show()
   }, 2000)
@@ -157,7 +157,7 @@ $(".emoji-container img").click(function () {
 // .attr() gets or sets an HTML element's attribute value
 
 /// this functionn is to make the qution and the answer
-
+///// this 
 var questionindex = 0
 var useranswers = []
 function affiche(questions) {
@@ -166,7 +166,6 @@ function affiche(questions) {
     var $question = $('<div class="question"></div>')
     $("#question-personality").append($question)
     $question.append("<h2>" + question.question + "</h2>")
-    var $answerslist = $("<p>");
     $question.append($answerslist)
     for (var i = 0; i < question.answers.length; i++) {
       var answer = question.answers[i]
@@ -174,7 +173,9 @@ function affiche(questions) {
       $answerslist.append($answer)
 
 
-
+ ///// this function is used to change the answer every time you click on one"
+ //// and themm push the answer to the array and increment it
+ //// them if the array of the qution  00 it witll go to the final message
       $answer.on("click", function () {
         $question.remove()
         useranswers.push(answer.text)
@@ -190,7 +191,8 @@ function affiche(questions) {
 
 
 
-
+/// for this function  it will  loop and find the persenalityy type and  dispalyy it 
+/// first loop ala el  personalitytypes  and  then   chekk the useranswers
 function displayPersonalitytype() {
   var message = ""
   var personalitytype = ""
@@ -203,6 +205,7 @@ function displayPersonalitytype() {
       }
     }
   }
+  //// for tghis one i to  find the max of the perso
   var max = personalitytypes[0]
   for (let index = 0; index < personalitytypes.length; index++) {
     const element = personalitytypes[index]
@@ -210,10 +213,12 @@ function displayPersonalitytype() {
       max = element;
     }
   }
+
+  ///   and lena  bechh tt3mll displayy el msg t3kk 
   console.log(personalitytypes)
-  console.log(max);
-  personalitytype = max.type;
-  personalitydescription = max.description;
+  console.log(max)
+  personalitytype = max.type
+  personalitydescription = max.description
   if (personalitytype) {
     message = "<h1>Congratulations! Your personality type is " + personalitytype + "!</h1>"
     message += "<p>" + personalitydescription + "</p>"

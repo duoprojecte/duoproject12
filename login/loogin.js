@@ -32,7 +32,7 @@ function each(coll, f) {
     } else if (element.username === username && element.pass=== password) {
         setTimeout(function () {   $("#msgErreur").text("")
             alert("Login successful!")     
-             window.location.href = "../firstpage.html"
+             window.location.href = "../personality.html"
           } , 1000) 
        
  
