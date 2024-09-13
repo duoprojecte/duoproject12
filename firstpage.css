@@ -1,0 +1,88 @@
+.intro-container {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* added semicolon */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-container h1 {
+  text-align: center;
+}
+
+.intro-container p {
+  text-align: center;
+}
+
+.intro-container .start-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.check-feelings-page {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* added semicolon */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emoji-container img {
+  width: 30px; 
+  height: 30px;
+  margin: 10px;
+}
+
+.check-feelings-page h2 {
+  text-align: center
+}
+
+.message-container {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#result-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+#question-personality {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.check-feelings-page {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+.intro-container, #result-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
