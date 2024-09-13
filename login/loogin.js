@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $("#Form2").on('submit', function(event) {
-        event.preventDefault()
-
+  
+event.preventDefault()
 var username=$("#name2").val()
 var password =$("#pass2").val()
-console.log(username);
-console.log(password);
+console.log(username)
+console.log(password)
 let users = JSON.parse(localStorage.getItem("users")) 
 console.log(users);
 
@@ -14,11 +14,11 @@ console.log(Array.isArray(users));
 function each(coll, f) {
     if (Array.isArray(coll)) {
       for (var i = 0; i < coll.length; i++) {
-        f(coll[i], i);
+        f(coll[i], i)
       }
     } else {
       for (var key in coll) {
-        f(coll[key], key);
+        f(coll[key], key)
       }
     }
   }
@@ -31,9 +31,14 @@ function each(coll, f) {
         
     } else if (element.username === username && element.pass=== password) {
         setTimeout(function () {   $("#msgErreur").text("")
-            alert("Login successful!") } , 1000)  
+            alert("Login successful!")     
+             window.location.href = "../firstpage.html"
+          } , 1000) 
+       
+ 
         $("#name2").css({"border-color":"green"})
         $("#pass2").css({"border-color":"green"})
+      
   
        
     }
@@ -41,6 +46,7 @@ function each(coll, f) {
     $("#name2").val("")
     $("#pass2").val("")
 });
+});
 })
-})
+
 

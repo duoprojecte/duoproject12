@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#Form').on('submit', function(event) {
+    $('#Form').on('submit', function(event) {   
         event.preventDefault()// Prevent the form from submitting
    
 //nhothom fi valeur
