@@ -1,11 +1,14 @@
 $(document).ready(function() {
     $("#Form2").on('submit', function(event) {
         event.preventDefault()
+        window.location.href = "../flight1/flight.html";
+    });
+        event.preventDefault()
 
 var username=$("#name2").val()
 var password =$("#pass2").val()
-console.log(username);
-console.log(password);
+console.log(username)
+console.log(password)
 let users = JSON.parse(localStorage.getItem("users")) 
 console.log(users);
 
@@ -14,11 +17,11 @@ console.log(Array.isArray(users));
 function each(coll, f) {
     if (Array.isArray(coll)) {
       for (var i = 0; i < coll.length; i++) {
-        f(coll[i], i);
+        f(coll[i], i)
       }
     } else {
       for (var key in coll) {
-        f(coll[key], key);
+        f(coll[key], key)
       }
     }
   }
@@ -42,5 +45,5 @@ function each(coll, f) {
     $("#pass2").val("")
 });
 })
-})
+
 
