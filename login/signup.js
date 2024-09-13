@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('#Form').on('submit', function(event) {
+        window.location.href = "C:\Users\lenovo\Desktop\duoproject12\firstpage.html";
         event.preventDefault()// Prevent the form from submitting
    
 //nhothom fi valeur
@@ -7,7 +8,9 @@ var username = $("#name").val()
 var email = $("#email").val()
 var pass = $("#pass").val()
 var Cpass = $("#Cpass").val()
-let users = JSON.parse(localStorage.getItem("users")) 
+let users = JSON.parse(localStorage.getItem("users")) || []
+console.log(users);
+
 //functionality
 if (username ==="" || email ==="" || pass ==="" || Cpass ==="") {
     $("#msgErreur").text("please fill")
@@ -22,9 +25,9 @@ $("#msgErreur").text("check your password")
 // localStorage.setItem('username', username)
 // localStorage.setItem('email', email)
 // localStorage.setItem('password', password)
-users.users.push({username : username , email : email , pass : pass , Cpass : Cpass})
+users.push({username : username , email : email , pass : pass , Cpass : Cpass})
 //storihom fi window
-localStorage.setItem("users" , JSON.stringify({users : users}));
+localStorage.setItem("users" , JSON.stringify(users));
 
 //bch nraj3ouhom vide
  $("#name").val("")
@@ -39,7 +42,3 @@ alert("Signup successful!");
     })
 
 })
-
-// $('#signup').click(function() {
-//     window.location.href = 'loogin.html'
-// })

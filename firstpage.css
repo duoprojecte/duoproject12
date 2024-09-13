@@ -1,17 +1,32 @@
-.intro-container {
+ #personality{
+
   height: 300px;
   width: 500px;
   margin: 0 auto; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* added semicolon */
+  transform: translate(-50%, -50%);
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  background-color: rgb(239, 206, 226);
 
+ }
+ .check-feelings-page h2 {
+  text-align: center
+}
+.emoji-container img {
+  width: 30px; 
+  height: 30px;
+  margin: 10px;
+}
+.emoji-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .intro-container h1 {
   text-align: center;
 }
@@ -25,64 +40,26 @@
   justify-content: center;
   width: 100%;
 }
-
-.check-feelings-page {
-  height: 300px;
-  width: 500px;
-  margin: 0 auto; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* added semicolon */
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+img{
+   height: 60%;
+   width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.emoji-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.emoji-container img {
-  width: 30px; 
-  height: 30px;
-  margin: 10px;
-}
-
-.check-feelings-page h2 {
-  text-align: center
-}
-
-.message-container {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-#result-container {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-}
-
-#question-personality {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.check-feelings-page {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-}
-.intro-container, #result-container {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+.btrn{
+  background-color: #fa78cb; /* Green */
+  border: none;
+  color: white;
+ 
+  text-align: center;
+  text-decoration: none;
+align-items: center;
+margin-left: 170px;
+  font-size: 16px;
+height: 50px;
+width: 140px;
+border-radius: 30px;
+padding: 10px;
+box-shadow: 5px 5px;
 }

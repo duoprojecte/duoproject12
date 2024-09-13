@@ -24,6 +24,7 @@ var questions = [
       { text: "Candlelit dinner" },
       { text: "Sunset walk" },
     ],
+   
   },
   {
     question: "What is the most exciting way to spend a weekend?",
@@ -143,7 +144,6 @@ $(".check-feelings-page").append(`
 
 ///// First function to hide and show the two pages, the intro and the check feelings
 $(".start-button").on("click", function () {
-  // useranswers = []
   $(".intro-container").hide()
   $(".check-feelings-page").show()
 });
@@ -186,7 +186,7 @@ function affiche(questions) {
     $question.append($answerslist);
     for (var i = 0; i < question.answers.length; i++) {
       var answer = question.answers[i];
-      var $answer = $('<p><input name="question' +questionindex +'" value="' + answer.text + '">' )
+      var $answer = $(`<button class="btrn"> ${answer.text}</button> <br> <br>`)
       $answerslist.append($answer)
 
 
